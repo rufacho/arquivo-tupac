@@ -1,159 +1,230 @@
-/* =============================
-   Estilo Geral do Site Tupac
-   ============================= */
-body {
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #111;
-    /* fundo escuro para contraste */
-    background-attachment: fixed;
-    line-height: 1.6;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Optima&display=swap');
+
+:root {
+    --vermelho-claro: #FF0000;
+    --vermelho-escuro: #990000;
+    --vermelho-suave: #FF6666;
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #00ffff;
 }
 
-/* Corrigir textos sumindo no fundo */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Playfair Display', serif;
-    color: #ff4444;
-    /* vermelho vibrante em homenagem à força e tragédia */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 1rem;
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    transition: font-size 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+/* ================================
+   Navegação
+================================ */
+.nav-link {
+    color: var(--vermelho-suave);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--vermelho-claro);
+}
+
+/* ================================
+   Seção inicial
+================================ */
+.inicio-fundo {
+    border-radius: 30px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-inicio {
+    width: 45rem;
+    height: auto;
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.botao-inicio {
+    background-color: var(--vermelho-claro);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-inicio:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.display-4 {
+    text-shadow: -5px 5px var(--vermelho-escuro);
+    color: blue;
+    /* título azul */
+    font-family: 'Optima', sans-serif;
+}
+
+/* ================================
+   Títulos e parágrafos
+================================ */
+h2 {
+    font-family: 'Montserrat', serif;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--vermelho-claro);
+}
+
+h3 {
+    color: rgb(62, 0, 207);
+    /* roxo */
 }
 
 p {
-    font-size: 1.1rem;
-    color: #ddd;
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
+    font-family: 'Optima', sans-serif;
+    color: #FFDDDD;
+    background-color: rgba(51, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    line-height: 1.6;
 }
 
-/* =============================
-   Navbar
-   ============================= */
-.navbar {
-    background-color: #222 !important;
-}
-
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    color: #ff4444 !important;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.navbar-brand:hover {
-    color: #fff !important;
-    text-shadow: 0 0 5px #ff4444;
-}
-
-/* =============================
-   Imagens
-   ============================= */
-img {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    margin: 1rem 0;
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-/* =============================
-   Seções
-   ============================= */
-section {
-    padding: 4rem 1rem;
-}
-
-.secao-Tupac {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 16px;
+/* ================================
+   Formulário
+================================ */
+.formulario {
+    background-color: rgba(153, 0, 0, 0.9);
     padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #ffffff;
 }
 
-/* =============================
-   Acessibilidade
-   ============================= */
-#acessibilidade {
+.formulario button {
+    background-color: var(--vermelho-claro);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.form-control {
+    background-color: #FFCCCC;
+    padding: 0.5rem;
+    color: #000000;
+}
+
+/* ================================
+   Painel de acessibilidade
+================================ */
+.menu-acessibilidade {
     position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 999;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
 }
 
-#botao-acessibilidade {
-    background: #ff4444;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    transition: 0.3s;
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
 }
 
-#botao-acessibilidade:hover {
-    background: #cc0000;
-}
-
-.lista-acessibilidade {
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: none;
-    list-style: none;
-    background: #222;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 8px;
+    /* inicialmente escondido */
+    flex-direction: column;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.lista-acessibilidade li {
-    margin: 5px 0;
-}
-
-.lista-acessibilidade button {
-    background: #444;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--vermelho-claro);
+    background-color: #ffbb00;
+    color: var(--vermelho-claro);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.lista-acessibilidade button:hover {
-    background: #ff4444;
+.opcoes-acessibilidade button:hover {
+    background-color: var(--vermelho-claro);
+    color: #ffffff;
 }
 
-/* =============================
-   Rodapé
-   ============================= */
-footer {
-    background: #000;
-    color: #aaa;
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+.apresenta-lista {
+    display: flex !important;
 }
 
-/* =============================
-   Animações ScrollReveal
-   ============================= */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
+/* ================================
+   Alto contraste (acessibilidade)
+================================ */
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+}
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste p,
+.alto-contraste figcaption {
+    color: var(--alto-contraste-texto) !important;
+}
+
+.alto-contraste a,
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link) !important;
+}
+
+.alto-contraste button,
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
 }
